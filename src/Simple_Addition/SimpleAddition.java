@@ -6,14 +6,15 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
 public class SimpleAddition extends JPanel implements MouseListener {
-    int x = -100,y = -100;
-    ImageIcon icon = new ImageIcon("src/Simple_Addition/smail.png");
+    private int x = -100,y = -100;
+    private final ImageIcon icon = new ImageIcon("src/Simple_Addition/smail.png");
+
     SimpleAddition () {
         addMouseListener(this);
         setSize(500,500);
         setVisible(true);
     }
-    public void paint (Graphics g) {
+   public void paint (Graphics g) {
         g.drawImage(icon.getImage(), x, y, 50,30,null);
     }
     @Override
